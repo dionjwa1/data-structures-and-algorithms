@@ -24,7 +24,7 @@ function lower(str) {
 const updateAnimal = (arr, callback) => {
   // Solution code here...
  let newArray = [];
-console.log(newArray);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
