@@ -11,13 +11,7 @@ should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
-// const toLastNames = people => (people.map(value => `${value.firstname}`, `${value.lastname}`)) {
-//   // Solution code here...
-
-//   toLastNames.map((people));
-
-// return people;
-// };
+const toLastNames = people => people.map(val => val.firstName + " " + val.lastName);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -26,9 +20,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => {
-  // Solution code here...
-};
+const addValues = (arr) => arr.reduce((a, b) => a + b, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -42,10 +34,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => {
-  // Solution code here...
-};
-
+const addPurchases = arr => arr.reduce((arr, cur) => arr + cur.purchasePrice, 0);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -54,9 +43,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
-};
+const countNumberOfElements = arr => arr.reduce((acc, cur) => cur === '0' ? acc : acc += 1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -115,14 +102,10 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-const returnNames = (arr) => {
-  // Solution code here...
-  const newArr = arr.reduce((acc, cur) => {
-    acc.push(cur.name);
-    return acc;
-  }, []);
-  return newArr;
-};
+const returnNames = (arr) => arr.reduce((acc, cur) => {
+  acc.push(cur.name);
+  return acc;
+}, []);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -133,9 +116,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
+  let newString = str.split('')
+  return newString.reduce((acc, cur) => {
+    return cur + acc
+  }, '');
   // Solution code here...
-  const arr = str.split('');
-  return arr.reduce((acc, cur) => cur + acc, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
