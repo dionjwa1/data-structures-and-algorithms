@@ -55,12 +55,14 @@ As you sharpen the pencil, the string will become shorter and shorter, starting 
 Your function should use slice within a loop and return an array of each successive string result from losing letters to the sharpener, until nothing is left.
 
 For example, if the input is 'Welcome', the output will be:
-['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
+['Welcome', 'elcome', 'lcome', 'come', 'omme', 'e', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  for (let i =0; i <=str.length; i++) {
+    result.push(str.slice(i));
+  }
   return result;
 };
 
@@ -72,9 +74,7 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  // Solution code here...
-};
+const wordsToCharList = (arr) => arr.split('');
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,7 +120,11 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(ingredients => {
+    let noAmounts = ingredients.slice(ingredients.indexOf(' ') +1);
+    let withoutUnits = noAmounts.slice(noAmounts.indexOf(' ') +1);
+    result.push(withoutUnits);
+  });
   return result;
 };
 
