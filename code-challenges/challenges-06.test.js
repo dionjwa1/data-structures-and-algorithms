@@ -30,7 +30,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = (str) => str + 'The End.';
+const appendTheEnd = (str) => str + ' The end.';
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
