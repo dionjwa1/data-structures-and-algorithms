@@ -94,17 +94,18 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
-const salesData = (hours, data) => {
-  let salesObj = [];
-  for (let i = 0; i < hours.length; i++) {
-    let cookie = 0;
-    for (let j = 0; j < data.length; j++) {
-      cookie +=
-        salesObj.push(cookie);
-    }
-    return salesObj;
-  }
-};
+// const salesData = (hours, data) => {
+//   let salesObj = data.map((each, idx) => {
+//     let obj = {};
+//     salesObj.push(cookie);
+
+//   })
+
+//         salesObj.push(cookie);
+//     }
+//     return salesObj;
+//   }
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -128,9 +129,14 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let treats = 0;
+  arr[2].items.pop();
+  arr[2].items.shift();
+  Object.values(arr[2].items).forEach(value => {
+    treats += value.quantity;
+  });
+  return treats;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
