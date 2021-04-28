@@ -7,7 +7,7 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 ------------------------------------------------------------------------------------------------ */
 
 const replaceZeros = (string) => {
-  return string.replace(/0/gm, `zero`);
+  return string.replace(/0/gm,'zero');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +65,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
+  // return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
+  return /^[a-zA-Z0-9]+(\.?[a-zA-Z0-9]+)?@[a-zA-Z0-9]+\.(com|org|net)$/.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
