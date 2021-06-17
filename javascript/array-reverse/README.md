@@ -7,7 +7,7 @@
 
 ## Whiteboard Process
 
-![Whiteboard diagram](./array-binary-search.png)
+![Whiteboard diagram](./WbImg.png)
 
 ## Approach and Efficiency
 
@@ -15,7 +15,6 @@
 - Visualized the arrays and the expected inputs and outputs
 - Developed a general code and to match the perscribed algorithm 
 
-
 ## Solution?
-- see code. 
 
+- 
