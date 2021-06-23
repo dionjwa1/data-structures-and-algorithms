@@ -14,12 +14,23 @@ class LinkedList {
     }
 
     insert(value) {
-        if (!this.head) {
-            this.head = new Node(value)
+        let current = this.head;
+        let newNode = new Node(value);
+        if (!current) {
+          this.head = newNode;
         } else {
-    
+          newNode.next = current;
+          this.head = newNode;
         }
-return this;
-    }
-};
+      }
 
+includes(value) {
+    let current = this.head;
+    while (current !== null) {
+        if(current.value === value){
+            return ("True");
+        }
+ 
+    }
+  };
+};
