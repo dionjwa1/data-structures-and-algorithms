@@ -63,6 +63,8 @@ class BinaryTree {
   }
 }
 
+
+
 const bt = new BinaryTree();
 
 bt.root = new Node(10);
